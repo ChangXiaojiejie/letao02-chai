@@ -78,8 +78,8 @@ $(function () {
                     // 参数2: status 状态
                     //        NOT_VALIDATED(未校验), VALIDATING(校验中), INVALID(校验失败) or VALID(校验成功)
                     // 参数3: validator 配置校验规则, 用来配置输出的提示信息
-                    // $("#form").data('bootstrapValidator').updateStatus('username', 'INVALID ', 'callback');
-                    $("#form").data('bootstrapValidator').updateStatus("username", "INVALID", 'callback');
+                    $("#form").data('bootstrapValidator').updateStatus('username', 'INVALID', 'callback'); //字符串里多出了一个空格
+                    // $("#form").data('bootstrapValidator').updateStatus("username", "INVALID", 'callback');
                     return;
                 }
                 if (info.error === 1001) {
