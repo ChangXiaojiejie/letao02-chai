@@ -1,123 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>乐淘商城首页</title>
-    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="./lib/bootstrap-validator/css/bootstrapValidator.min.css"
-    />
-    <link rel="stylesheet" href="./lib/nprogress/nprogress.css" />
-    <link rel="stylesheet" href="css/common.css" />
-  </head>
 
-  <body>
-    <!-- 侧边栏 -->
-    <div class="lt_aside">
-      <div class="brand"><a href="javascript:;">黑马天上人间</a></div>
-      <div class="user">
-        <a href="index.html"><img src="images/images (4).jpg" alt=""/></a>
-        <a class="manage" href="index.html">超级管理员</a>
-      </div>
-      <div class="nav">
-        <ul>
-          <li>
-            <a href="user.html"
-              ><i class="glyphicon glyphicon-user"></i>用户管理</a
-            >
-          </li>
-          <li>
-            <a class="category" href="#"
-              ><i class="glyphicon glyphicon-list"></i>分类管理</a
-            >
-            <div class="child">
-              <a href="first.html">一级分类</a>
-              <a href="second.html">二级分类</a>
-            </div>
-          </li>
-          <li>
-            <a href="product.html"
-              ><i class="glyphicon glyphicon-tags"></i>商品管理</a
-            >
-          </li>
-        </ul>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>乐淘商城首页</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css" />
+  <link rel="stylesheet" href="./lib/nprogress/nprogress.css" />
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+
+<body>
+  <!-- 侧边栏 -->
+  <div class="lt_aside">
+    <div class="brand"><a href="javascript:;">黑马天上人间</a></div>
+    <div class="user">
+      <a href="index.html"><img src="images/images (4).jpg" alt="" /></a>
+      <a class="manage" href="index.html">超级管理员</a>
+    </div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="user.html"><i class="glyphicon glyphicon-user"></i>用户管理</a>
+        </li>
+        <li>
+          <a class="category" href="#"><i class="glyphicon glyphicon-list"></i>分类管理</a>
+          <div class="child">
+            <a href="first.html">一级分类</a>
+            <a href="second.html">二级分类</a>
+          </div>
+        </li>
+        <li>
+          <a href="product.html"><i class="glyphicon glyphicon-tags"></i>商品管理</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 主体部分 -->
+  <div class="lt_main">
+    <!-- 主体头部 -->
+    <div class="lt_topbar">
+      <a class="icon_left pull-left" href="javascript:;"><i class="glyphicon glyphicon-align-justify"></i></a>
+      <a class="icon_right pull-right" href="javascript:;"><i class="glyphicon glyphicon-log-out"></i></a>
     </div>
 
-    <!-- 主体部分 -->
-    <div class="lt_main">
-      <!-- 主体头部 -->
-      <div class="lt_topbar">
-        <a class="icon_left pull-left" href="javascript:;"
-          ><i class="glyphicon glyphicon-align-justify"></i
-        ></a>
-        <a class="icon_right pull-right" href="javascript:;"
-          ><i class="glyphicon glyphicon-log-out"></i
-        ></a>
+    <!-- bootstrap流失布局 -->
+    <div class="container-fluid">
+      <!-- 路径导航 -->
+      <ol class="breadcrumb mt_20">
+        <li><a href="index.html">管理系统</a></li>
+        <li class="active">首页</li>
+      </ol>
+
+      <!-- echarts图表 -->
+      <div class="lt_content">
+        <div class="echarts_left pull-left"></div>
+        <div class="echarts_right pull-right"></div>
       </div>
+    </div>
+  </div>
 
-      <!-- bootstrap流失布局 -->
-      <div class="container-fluid">
-        <!-- 路径导航 -->
-        <ol class="breadcrumb mt_20">
-          <li><a href="index.html">管理系统</a></li>
-          <li class="active">首页</li>
-        </ol>
-
-        <!-- echarts图表 -->
-        <div class="lt_content">
-          <div class="echarts_left pull-left"></div>
-          <div class="echarts_right pull-right"></div>
+  <!-- 模态框 -->
+  <div class="modal fade" tabindex="-1" id="logouModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p class="red">
+            <i class="glyphicon glyphicon-info-sign"></i>
+            您确定要退出后台管理系统吗？
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            取消
+          </button>
+          <button type="button" class="btn btn-primary" id="logouBtn">
+            退出
+          </button>
         </div>
       </div>
+      <!-- /.modal-content -->
     </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
 
-    <!-- 模态框 -->
-    <div class="modal fade" tabindex="-1" id="logouModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-            <h4 class="modal-title">温馨提示</h4>
-          </div>
-          <div class="modal-body">
-            <p class="red">
-              <i class="glyphicon glyphicon-info-sign"></i>
-              您确定要退出后台管理系统吗？
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
-              取消
-            </button>
-            <button type="button" class="btn btn-primary" id="logouBtn">
-              退出
-            </button>
-          </div>
-        </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <script src="./lib/echarts/echarts.min.js"></script>
+  <script src="./lib/nprogress/nprogress.js"></script>
+  <script src="./js/isLogin.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/index.js"></script>
+</body>
 
-    <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-
-    <script
-      type="text/javascript"
-      src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"
-    ></script>
-    <script src="./lib/echarts/echarts.min.js"></script>
-    <script src="./lib/nprogress/nprogress.js"></script>
-    <script src="./js/isLogin.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/index.js"></script>
-  </body>
 </html>

@@ -9,9 +9,10 @@ a:active {
     display: block;
 } */
 
-img {
-    display: block;
-    width: 100%;
+.table.table-bordered td,
+.table.table-bordered th {
+    text-align: center;
+    vertical-align: middle;
 }
 
 ul {
@@ -87,6 +88,8 @@ ul {
 }
 
 .lt_aside .user img {
+    display: block;
+
     width: 80px;
     height: 80px;
     margin: 0 auto;
