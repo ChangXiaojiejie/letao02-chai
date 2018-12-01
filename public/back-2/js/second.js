@@ -134,7 +134,7 @@ $(function () {
         }
     });
 
-    // 6.
+    // 6.表单验证成功
     $('#form').on('success.form.bv', function (e) {
         e.preventDefault()
 
@@ -149,6 +149,13 @@ $(function () {
                 $('#addModal').modal('hide')
 
                 render()
+
+                //重置表单
+                $('#form').data('bootstrapValidator').resetForm('categoryId', 'VALID')
+                $('.dropdownText').text('请输入一级分类')
+                $('#imgBox img').attr('src', './images/images (4).jpg')
+
+
             }
         })
     })
